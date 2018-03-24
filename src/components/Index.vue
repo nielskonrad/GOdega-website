@@ -17,15 +17,16 @@
 
 <script>
 
-import Lottie from '../lottie.vue';
-import * as animationData from '/static/sensor-bursts-1-data.json';
+import Lottie from '../../plugins/lottie.vue'
+import * as animationData from '../../static/animations/bursts-1.json'
+// import * as animationData from '../../static/animations/godega-1.json'
 
 export default {
   name: 'hello',
   components: {
     'lottie': Lottie
   },
-  data() {
+  data () {
     return {
       defaultOptions: {animationData: animationData},
       animationSpeed: 1,
@@ -35,23 +36,19 @@ export default {
   },
   methods: {
     handleAnimation: function (anim) {
-      this.anim = anim;
+      this.anim = anim
     },
-
     stop: function () {
-      this.anim.stop();
+      this.anim.stop()
     },
-
     play: function () {
-      this.anim.play();
+      this.anim.play()
     },
-
     pause: function () {
-      this.anim.pause();
+      this.anim.pause()
     },
-
     onSpeedChange: function () {
-      this.anim.setSpeed(this.animationSpeed);
+      this.anim.setSpeed(this.animationSpeed)
     }
   }
 }
@@ -59,6 +56,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* #animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
 
 h1, h2 {
   font-weight: normal;
