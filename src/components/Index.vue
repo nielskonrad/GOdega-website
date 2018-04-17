@@ -4,13 +4,13 @@
     <p>{{ why }}</p>
     <div id="animation">
       <lottie :options="defaultOptions" :height="400" :width="400" v-on:animCreated="handleAnimation"/>
-      <div>
+      <!-- <div>
           <p>Speed: x{{animationSpeed}}</p>
           <input type="range" value="1" min="0" max="3" step="0.5" v-on:change="onSpeedChange" v-model="animationSpeed">
       </div>
       <button v-on:click="stop">stop</button>
       <button v-on:click="pause">pause</button>
-      <button v-on:click="play">play</button>
+      <button v-on:click="play">play</button> -->
     </div>
   </div>
 </template>
@@ -18,8 +18,8 @@
 <script>
 
 import Lottie from '../../plugins/lottie.vue'
-import * as animationData from '../../static/animations/bursts-1.json'
-// import * as animationData from '../../static/animations/godega-1.json'
+// import * as animationData from '../../static/animations/bursts-1.json'
+import * as animationData from '../../static/animations/godega-1.json'
 
 export default {
   name: 'hello',
