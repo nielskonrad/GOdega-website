@@ -16,6 +16,8 @@
   "dependencies": {
     "browserify": "^16.1.1",
     "browserify-shim": "^3.8.14",
+    "npm": "^5.8.0",
+    "parallax-js": "^3.1.0",
     "save": "^2.3.1",
     "uglify-js": "^3.0.24",
     "vue": "^2.3.4",
