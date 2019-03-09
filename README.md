@@ -1,6 +1,16 @@
 # godega-website
 
+<!-- 
+MongoDB user
+user1
+pw: b....
+-->
+
 > The GOdega website version 1.0
+
+<!-- Sources of inspiration -->
+<!-- https://www.youtube.com/watch?v=j55fHUJqtyw -->
+<!-- obsolete: https://scotch.io/tutorials/building-a-universal-application-with-nuxtjs-and-django -->
 
 ## Build Setup
 
