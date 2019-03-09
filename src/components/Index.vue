@@ -16,7 +16,7 @@
 </template>
 
 <script>
-
+// testing git
 import Lottie from '../../plugins/lottie.vue'
 // import * as animationData from '../../static/animations/bursts-1.json'
 import * as animationData from '../../static/animations/godega-1.json'
