@@ -7,7 +7,7 @@
         <input type="text" id="create-post" v-model="name" placeholder="Hvad hedder bodegaen?">
       </div>
       <div class="input-block">
-        <label for="create-post">Adress</label>
+        <label for="create-post">Address</label>
         <input type="text" id="create-post" v-model="address" placeholder="Adresse">
       </div>
       <button v-on:click="createPost">Create post</button>
