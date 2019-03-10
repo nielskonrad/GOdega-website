@@ -1,3 +1,4 @@
+// Author: Niels
 // Config file
 
 const path = require('path');
