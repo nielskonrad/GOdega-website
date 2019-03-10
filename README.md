@@ -7,6 +7,8 @@ pw: b....
 
 MongoDB Atlas
 https://cloud.mongodb.com/v2/5c83cbd1f2a30bd909788f03#clusters/detail/Cluster0
+
+https://konradstudio-website.admin.datocms.com/editor/item_types/37382/items/745927/edit
 -->
 
 <!-- 
@@ -17,6 +19,8 @@ http://localhost:8080/
 Watch the api
 http://localhost:5000/api/posts
 The GOdega website version 1.0
+
+https://godega-app.herokuapp.com/godega-app
 
 
 Heroku commands
@@ -49,10 +53,17 @@ $ npm run build
 
 
 <!-- 
+Resources
+https://console.cloud.google.com/google/maps-apis/overview
+https://cloud.mongodb.com
+
 Sources of inspiration
 test-app is based on
 https://www.youtube.com/watch?v=j55fHUJqtyw
 Author Brad Traversy
+
+Google Maps API article
+https://markus.oberlehner.net/blog/using-the-google-maps-api-with-vue/
 -->
 
 
