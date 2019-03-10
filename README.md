@@ -24,6 +24,13 @@ $ heroku login
 $ heroku create
 
 $ heroku git:remote -a <app-name>
+
+Terminal 1
+/Users/nielskonrad/Development/konradstudio-dev/GOdega-website/test-app
+
+Terminal 2
+/Users/nielskonrad/Development/konradstudio-dev/GOdega-website/test-app/client
+
 -->
 
 
