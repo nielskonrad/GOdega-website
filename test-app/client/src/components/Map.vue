@@ -18,83 +18,45 @@ export default {
     var self = this
     try {
       const google = await gmapsInit();
-      var destination = '';
-      var directionsService = new google.maps.DirectionsService();
-      var directionsDisplay = new google.maps.DirectionsRenderer();
-      var createMap = function (start) {
-        var travel = {
-          origin : (start.coords)? new google.maps.LatLng(start.lat, start.lng) : start.address,
-          destination : destination,
-          travelMode : google.maps.DirectionsTravelMode.WALKING
-        };
-        directionsService.route(travel, function(result, status) {
-          if (status === google.maps.DirectionsStatus.OK) {
-            
-            var str = result.routes[0].legs[0].start_address;
-            var res = str.replace(", Danmark", "");
-            console.log(res);
+      self.infoWindow = new google.maps.InfoWindow;
+      const geocoder = new google.maps.Geocoder();
+      const map = new google.maps.Map(this.$el);
+      geocoder.geocode({ address: 'Austria' }, (results, status) => {
+        if (status !== 'OK' || !results[0]) {
+          throw new Error(status);
+        }
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
-            // directionsDisplay.setDirections(result);
-          }
-        });
-      };
+            var myLocationIcon = {
+              path: 'M11 11l1.256 5 3.744-10-10 3.75 5 1.25zm1-11c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8z',
+              scale: 1,
+              fillColor: '#3a84df'
+            };
 
-      // Check for geolocation support  
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            // Success!
-            createMap({
-              coords : true,
-              lat : position.coords.latitude,
-              lng : position.coords.longitude
+            self.infoWindow.setPosition(pos);
+            // self.infoWindow.setContent('Location found.');
+            // self.infoWindow.open(map);
+            var marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              animation: google.maps.Animation.DROP,
+              icon: myLocationIcon
+              // title: 'Hello World!',
+              // icon: 'https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png',
             });
-          }, 
-          function () {
-            // Gelocation fallback: Defaults to Copenhagen, Denmark
-            createMap({
-              coords : false,
-              address : "Copenhagen, Denmark"
-            });
-          }
-        );
-      } else {
-        // No geolocation fallback: Defaults to Copenhagen, Denmark
-        createMap({
-          coords : false,
-          address : "Copenhagen, Denmark"
-        });
-      }
-      // self.infoWindow = new google.maps.InfoWindow;
-      // const geocoder = new google.maps.Geocoder();
-      // const map = new google.maps.Map(this.$el);
-      // geocoder.geocode({ address: 'Austria' }, (results, status) => {
-      //   if (status !== 'OK' || !results[0]) {
-      //     throw new Error(status);
-      //   }
-      //   if (navigator.geolocation) {
-      //     navigator.geolocation.getCurrentPosition(function(position) {
-      //       var pos = {
-      //         lat: position.coords.latitude,
-      //         lng: position.coords.longitude
-      //       };
-
-      //       self.infoWindow.setPosition(pos);
-      //       // self.infoWindow.setContent('Location found.');
-      //       // self.infoWindow.open(map);
-      //       var marker = new google.maps.Marker({
-      //         position: pos,
-      //         map: map,
-      //         // title: 'Hello World!',
-      //         // icon: 'https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png',
-      //       });
-      //       map.setCenter(pos);
-      //     }, function() {
-      //       handleLocationError(true, infoWindow, map.getCenter());
-      //     });
-      //   }
-      //   // map.setCenter(results[0].geometry.location);
-      //   map.fitBounds(results[0].geometry.viewport);
-      // });
+            map.setCenter(pos);
+          }, function() {
+            // handleLocationError(true, self.infoWindow, map.getCenter());
+          });
+        }
+        // map.setCenter(results[0].geometry.location);
+        map.fitBounds(results[0].geometry.viewport);
+      });
     } catch (error) {
       // console.error(error);
     }
