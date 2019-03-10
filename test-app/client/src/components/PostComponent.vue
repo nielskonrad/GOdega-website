@@ -2,8 +2,14 @@
   <div class="container">
     <h1>Latest Posts</h1>
     <div class="create-post">
-      <label for="create-post">Say something</label>
-      <input type="text" id="create-post" v-model="text" placeholder="Input new item here">
+      <div class="input-block">
+        <label for="create-post">Name</label>
+        <input type="text" id="create-post" v-model="name" placeholder="Hvad hedder bodegaen?">
+      </div>
+      <div class="input-block">
+        <label for="create-post">Adress</label>
+        <input type="text" id="create-post" v-model="address" placeholder="Adresse">
+      </div>
       <button v-on:click="createPost">Create post</button>
     </div>
     <hr>
@@ -34,7 +40,8 @@ export default {
     return {
       posts: [],
       error: '',
-      text: ''
+      name: '',
+      address: ''
     }
   },
   async created() {
@@ -46,7 +53,7 @@ export default {
   },
   methods: {
     async createPost() {
-      await PostService.insertPost(this.text);
+      await PostService.insertPost(this.name, this.address);
       this.posts = await PostService.getPosts();
     },
     async deletePost(id) {
@@ -63,6 +70,12 @@ export default {
 div.container {
  max-width: 800px;
  margin: 0 auto; 
+}
+
+.input-block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 p.error {
