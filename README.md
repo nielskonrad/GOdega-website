@@ -18,19 +18,33 @@ Watch the api
 http://localhost:5000/api/posts
 The GOdega website version 1.0
 
+
 Heroku commands
+//-------------
 $ heroku login
 
 $ heroku create
 
 $ heroku git:remote -a <app-name>
+($ heroku git:remote -a godega-app)
 
-Terminal 1
+git push heroku master
+//------------- Heroku ends
+
+Terminal 1 - Server
 /Users/nielskonrad/Development/konradstudio-dev/GOdega-website/test-app
+To run:
+$ npm run dev
 
-Terminal 2
+Terminal 2 - Client
 /Users/nielskonrad/Development/konradstudio-dev/GOdega-website/test-app/client
 
+
+To run client
+$ npm run serve
+
+To build static
+$ npm run build
 -->
 
 
