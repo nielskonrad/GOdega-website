@@ -4,20 +4,35 @@
 MongoDB user
 user1
 pw: b....
+
+MongoDB Atlas
 https://cloud.mongodb.com/v2/5c83cbd1f2a30bd909788f03#clusters/detail/Cluster0
 -->
 
 <!-- 
 Full stack Vue with Express
 
+http://localhost:8080/
+
 Watch the api
 http://localhost:5000/api/posts
+The GOdega website version 1.0
+
+Heroku commands
+$ heroku login
+
+$ heroku create
+
+$ heroku git:remote -a <app-name>
 -->
 
-> The GOdega website version 1.0
 
-<!-- Sources of inspiration -->
-<!-- https://www.youtube.com/watch?v=j55fHUJqtyw -->
+<!-- 
+Sources of inspiration
+test-app is based on
+https://www.youtube.com/watch?v=j55fHUJqtyw
+Author Brad Traversy
+-->
 
 
 
