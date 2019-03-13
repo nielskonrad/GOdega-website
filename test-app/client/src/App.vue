@@ -2,20 +2,21 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <PostComponent msg="Welcome to Your Vue.js App"/>
-    <Map/>
+    <!-- <Map/> -->
+    <MapBoxMap/>
   </div>
 </template>
 
 <script>
 
 import PostComponent from './components/PostComponent.vue'
-import Map from './components/Map.vue'
+import MapBoxMap from './components/MapBoxMap.vue'
 
 export default {
   name: 'app',
   components: {
     PostComponent,
-    Map
+    MapBoxMap
   }
 }
 </script>
