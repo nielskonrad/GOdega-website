@@ -11,6 +11,11 @@ module.exports = {
         target: 'http://localhost:5000'
       }
     }
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      mapboxgl: 'mapbox-gl'
+    })
+  ]
 };
 
