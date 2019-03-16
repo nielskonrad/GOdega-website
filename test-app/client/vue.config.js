@@ -2,6 +2,7 @@
 // Config file
 
 const path = require('path');
+const webpack = require('webpack')
 
 module.exports = {
   outputDir: path.resolve(__dirname, '../server/public'),
@@ -12,10 +13,12 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      mapboxgl: 'mapbox-gl'
-    })
-  ]
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        mapboxgl: 'mapbox-gl'
+      })
+    ]
+  }
 };
 

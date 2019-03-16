@@ -11,6 +11,7 @@ https://cloud.mongodb.com/v2/5c83cbd1f2a30bd909788f03#clusters/detail/Cluster0
 https://konradstudio-website.admin.datocms.com/editor/item_types/37382/items/745927/edit
 -->
 
+
 <!-- 
 Full stack Vue with Express
 
@@ -43,6 +44,8 @@ $ npm run dev
 Terminal 2 - Client
 /Users/nielskonrad/Development/konradstudio-dev/GOdega-website/test-app/client
 
+Maps code
+https://developers.arcgis.com/javascript/3/jssamples/exp_geolocate.html
 
 To run client
 $ npm run serve

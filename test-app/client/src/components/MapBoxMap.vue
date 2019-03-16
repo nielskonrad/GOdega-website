@@ -1,25 +1,10 @@
-<template>
-  <div class="map-wrapper">
-    <mapbox access-token="accessToken"
-    :map-options="{
-      style: 'mapbox://styles/mapbox/light-v9',
-      center: [-96, 37.8],
-      zoom: 3
-    }"
-    :geolocate-control="{
-      show: true,
-      position: 'top-left'
-    }"
-    :scale-control="{
-      show: true,
-      position: 'top-left'
-    }"
-    :fullscreen-control="{
-      show: true,
-      position: 'top-left'
-    }">
-    </mapbox>
-  </div>
+<template lang="pug">
+  div.map-wrapper
+    Mapbox(access-token="accessToken"
+      :map-options="mapOptions"
+      :geolocate-control="controlOptions"
+      :scale-control="scaleOptions"
+      :fullscreen-control="fullScreenOptions")
 </template>
 
 <script>
@@ -33,7 +18,24 @@ export default {
   },
   data() {
     return {
-      accessToken: 'pk.eyJ1IjoibmllbHNrb25yYWQiLCJhIjoiY2o1Y2s1ODRlMDlsejMzb2RhN3UyOHJmMSJ9.M3F8blMm0BJCIilcoSMa9g'
+      accessToken: 'pk.eyJ1IjoibmllbHNrb25yYWQiLCJhIjoiY2o1Y2s1ODRlMDlsejMzb2RhN3UyOHJmMSJ9.M3F8blMm0BJCIilcoSMa9g',
+      mapOptions: {
+        style: 'mapbox://styles/mapbox/light-v9',
+        center: [-96, 37.8],
+        zoom: 3
+      },
+      controlOptions: {
+        show: true,
+        position: 'top-left'
+      },
+      scaleOptions: {
+        show: true,
+        position: 'top-left'
+      },
+      fullScreenOptions: {
+        show: true,
+        position: 'top-left'
+      }
     }
   },
   async mounted() {
@@ -50,7 +52,7 @@ export default {
 <style>
 
 .map-wrapper {
-  background: red;
+  /* background: red; */
   width: 100%;
   height: 300px;
 }

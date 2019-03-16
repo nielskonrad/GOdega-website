@@ -15,9 +15,12 @@
     "express": "^4.16.4",
     "mapbox-gl": "^0.53.1",
     "mapbox-gl-vue": "^1.9.0",
-    "mongodb": "^3.1.13"
+    "mongodb": "^3.1.13",
+    "pug-plain-loader": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0"
   }
 }
