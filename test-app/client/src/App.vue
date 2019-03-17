@@ -1,10 +1,7 @@
-<template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <PostComponent/>
-    <!-- <Map/> -->
-    <MapBoxMap/>
-  </div>
+<template lang="pug">
+  div#app
+    PostComponent
+    MapBoxMap
 </template>
 
 <script>
