@@ -16,7 +16,9 @@
     "mapbox-gl": "^0.53.1",
     "mapbox-gl-vue": "^1.9.0",
     "mongodb": "^3.1.13",
-    "pug-plain-loader": "^1.0.0"
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10",

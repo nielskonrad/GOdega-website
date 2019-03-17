@@ -21,7 +21,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+@import "~@/assets/css/mapbox-gl.css";
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
